@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="fundo">
+        <h1>
+            Calculadora simples
+        </h1>
+
+        <div class="calculadora">
+
+            <div class="display">
+                <p id="valor"></p>
+                <input type="text" id="display" readonly>
+            </div>
+            <table>
+                <tr>
+                    <td><Button class="calcularbotoes" id="limparTudo" onclick="limparTudo()">C</button></td>
+                    <td><Button class="calcularbotoes" id="limparDisplay" onclick="limparDisplay()">CE</button></td>
+                    <td><Button class="calcularbotoes" id="dividir" onclick="atualizarOperacao('/')">÷</button></td>
+                    <td><Button class="calcularbotoes" id="multiplicar" onclick="atualizarOperacao('*')">x</button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="calcularbotoes" id="num7" onclick="insert('7')">7</button></td>
+                    <td><button class="calcularbotoes" id="num8" onclick="insert('8')">8</button></td>
+                    <td><button class="calcularbotoes" id="num9" onclick="insert('9')">9</button></td>
+                    <td><button class="calcularbotoes" id="subtrair" onclick="atualizarOperacao('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="calcularbotoes" id="num4" onclick="insert('4')">4</button></td>
+                    <td><button class="calcularbotoes" id="num5" onclick="insert('5')">5</button></td>
+                    <td><button class="calcularbotoes" id="num6" onclick="insert('6')">6</button></td>
+                    <td><button class="calcularbotoes" id="somar" onclick="atualizarOperacao('+')">+</button></td>
+
+                </tr>
+                <tr>
+                    <td><button class="calcularbotoes" id="num1" onclick="insert('1')">1</button></td>
+                    <td><button class="calcularbotoes" id="num2" onclick="insert('2')">2</button></td>
+                    <td><button class="calcularbotoes" id="num3" onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button class="calcularbotoes" id="resultado" onclick="executar()">=</button></td>
+
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="calcularbotoes" id="num0" onclick="insert('0')">0</button></td>
+                    <td><button class="calcularbotoes" id="ponto" onclick="insert('.')">.</button></td>
+
+                </tr>
+            </table>
+
+        </div>  
+        
+    <p>&copy;Nierich</p>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
